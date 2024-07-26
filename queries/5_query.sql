@@ -29,5 +29,5 @@ JOIN
 WHERE 
     m.country_id = 1
     AND m.release_date >= '2022-01-01'
-    AND m.duration > 100
+    AND m.duration > 135
     AND g.genre_name IN ('Action', 'Drama');
