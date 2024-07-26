@@ -9,6 +9,8 @@ erDiagram
     Country {
         country_id SERIAL PK
         country_name VARCHAR
+        createdAt TIMESTAMP
+        updatedAt TIMESTAMP
     }
 
     File {
@@ -17,6 +19,8 @@ erDiagram
         mime_type VARCHAR
         key VARCHAR
         url TEXT
+        createdAt TIMESTAMP
+        updatedAt TIMESTAMP
     }
 
     Person {
@@ -28,17 +32,23 @@ erDiagram
         gender VARCHAR
         home_country_id INT
         primary_photo_file_id INT
+        createdAt TIMESTAMP
+        updatedAt TIMESTAMP
     }
 
     PersonPhoto {
         photo_id SERIAL PK
         person_id INT
         photo_file_id INT
+        createdAt TIMESTAMP
+        updatedAt TIMESTAMP
     }
 
     Genre {
         genre_id SERIAL PK
         genre_name VARCHAR
+        createdAt TIMESTAMP
+        updatedAt TIMESTAMP
     }
 
     Movie {
@@ -51,17 +61,23 @@ erDiagram
         director_id INT
         country_id INT
         poster_file_id INT
+        createdAt TIMESTAMP
+        updatedAt TIMESTAMP
     }
 
     ActorParticipation {
         participation_id SERIAL PK
         movie_id INT
         person_id INT
+        createdAt TIMESTAMP
+        updatedAt TIMESTAMP
     }
 
     MovieGenre {
         movie_id INT
         genre_id INT
+        createdAt TIMESTAMP
+        updatedAt TIMESTAMP
     }
 
     Character {
@@ -71,6 +87,8 @@ erDiagram
         role VARCHAR
         movie_id INT
         person_id INT
+        createdAt TIMESTAMP
+        updatedAt TIMESTAMP
     }
 
     UserAccount {
@@ -81,11 +99,15 @@ erDiagram
         email VARCHAR
         password VARCHAR
         avatar_file_id INT
+        createdAt TIMESTAMP
+        updatedAt TIMESTAMP
     }
 
     FavoriteMovie {
         user_id INT
         movie_id INT
+        createdAt TIMESTAMP
+        updatedAt TIMESTAMP
     }
 
     %% Relationships
